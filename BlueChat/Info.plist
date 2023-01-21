@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Permitir acceso a la galería para agregar foto de perfil.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Permitir acceso a la camara para agregar foto de perfil.</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -21,5 +29,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key></key>
+	<string></string>
+	<key>CFBundleExecutable</key>
+	<string></string>
 </dict>
 </plist>

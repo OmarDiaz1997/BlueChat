@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>735673063483-qn0putf9h7amaa2kdt79si1amm3q1lvv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.735673063483-qn0putf9h7amaa2kdt79si1amm3q1lvv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDFGQqK1Zc6Nprfv72LLbPIabsgvsAtO0Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>735673063483</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.digi01.BlueChat</string>
+	<key>PROJECT_ID</key>
+	<string>bluechat-8a8dc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bluechat-8a8dc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:735673063483:ios:b0443abaa09c6e6480641e</string>
+</dict>
+</plist>

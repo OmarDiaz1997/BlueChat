@@ -3,29 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D3F546BC7737ADE4261AB93 /* Pods_BlueChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768407222E733257DA3FA13C /* Pods_BlueChat.framework */; };
 		EF30CA97297609B900A843CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30CA96297609B900A843CB /* AppDelegate.swift */; };
 		EF30CA99297609B900A843CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30CA98297609B900A843CB /* SceneDelegate.swift */; };
-		EF30CA9B297609B900A843CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30CA9A297609B900A843CB /* ViewController.swift */; };
+		EF30CA9B297609B900A843CB /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30CA9A297609B900A843CB /* ConversationsViewController.swift */; };
 		EF30CA9E297609B900A843CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF30CA9C297609B900A843CB /* Main.storyboard */; };
 		EF30CAA1297609B900A843CB /* BlueChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF30CA9F297609B900A843CB /* BlueChat.xcdatamodeld */; };
 		EF30CAA3297609BD00A843CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF30CAA2297609BD00A843CB /* Assets.xcassets */; };
 		EF30CAA6297609BD00A843CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF30CAA4297609BD00A843CB /* LaunchScreen.storyboard */; };
+		EF44478F297B514600211389 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF44478E297B514500211389 /* GoogleService-Info.plist */; };
+		EFA1614E2978C11F009E9575 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1614D2978C11F009E9575 /* LoginViewController.swift */; };
+		EFA161502978C14B009E9575 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1614F2978C14B009E9575 /* RegisterViewController.swift */; };
+		EFA161522978C180009E9575 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA161512978C180009E9575 /* PhotoViewController.swift */; };
+		EFA161542978C199009E9575 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA161532978C199009E9575 /* VideoPlayerViewController.swift */; };
+		EFA161562978C1EB009E9575 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA161552978C1EB009E9575 /* NewConversationViewController.swift */; };
+		EFA161582978C21A009E9575 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA161572978C21A009E9575 /* ProfileViewController.swift */; };
+		EFA9CCF0297751DB0052D6C4 /* MensajesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9CCEF297751DB0052D6C4 /* MensajesViewController.swift */; };
+		EFA9CCF229775CA20052D6C4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9CCF129775CA20052D6C4 /* ChatViewController.swift */; };
+		EFCAF2CE2979FA4A002F6D5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF2CD2979FA4A002F6D5A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		768407222E733257DA3FA13C /* Pods_BlueChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B191631FC6DDC4F9FB88180 /* Pods-BlueChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueChat.debug.xcconfig"; path = "Target Support Files/Pods-BlueChat/Pods-BlueChat.debug.xcconfig"; sourceTree = "<group>"; };
+		917A7EB0ADE66E6230C7AAE8 /* Pods-BlueChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueChat.release.xcconfig"; path = "Target Support Files/Pods-BlueChat/Pods-BlueChat.release.xcconfig"; sourceTree = "<group>"; };
 		EF30CA93297609B900A843CB /* BlueChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF30CA96297609B900A843CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF30CA98297609B900A843CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF30CA9A297609B900A843CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF30CA9A297609B900A843CB /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		EF30CA9D297609B900A843CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF30CAA0297609B900A843CB /* BlueChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlueChat.xcdatamodel; sourceTree = "<group>"; };
 		EF30CAA2297609BD00A843CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF30CAA5297609BD00A843CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF30CAA7297609BD00A843CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF44478E297B514500211389 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EFA1614D2978C11F009E9575 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EFA1614F2978C14B009E9575 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		EFA161512978C180009E9575 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		EFA161532978C199009E9575 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		EFA161552978C1EB009E9575 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
+		EFA161572978C21A009E9575 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EFA9CCEF297751DB0052D6C4 /* MensajesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensajesViewController.swift; sourceTree = "<group>"; };
+		EFA9CCF129775CA20052D6C4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		EFCAF2CD2979FA4A002F6D5A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +57,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3F546BC7737ADE4261AB93 /* Pods_BlueChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BC0471EC7E1950E932F83BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				768407222E733257DA3FA13C /* Pods_BlueChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99EF657AF38154FD2AB229D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B191631FC6DDC4F9FB88180 /* Pods-BlueChat.debug.xcconfig */,
+				917A7EB0ADE66E6230C7AAE8 /* Pods-BlueChat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EF30CA8A297609B900A843CB = {
 			isa = PBXGroup;
 			children = (
+				EF44478E297B514500211389 /* GoogleService-Info.plist */,
 				EF30CA95297609B900A843CB /* BlueChat */,
 				EF30CA94297609B900A843CB /* Products */,
+				99EF657AF38154FD2AB229D1 /* Pods */,
+				4BC0471EC7E1950E932F83BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +103,81 @@
 		EF30CA95297609B900A843CB /* BlueChat */ = {
 			isa = PBXGroup;
 			children = (
-				EF30CA96297609B900A843CB /* AppDelegate.swift */,
-				EF30CA98297609B900A843CB /* SceneDelegate.swift */,
-				EF30CA9A297609B900A843CB /* ViewController.swift */,
-				EF30CA9C297609B900A843CB /* Main.storyboard */,
-				EF30CAA2297609BD00A843CB /* Assets.xcassets */,
-				EF30CAA4297609BD00A843CB /* LaunchScreen.storyboard */,
+				EFA161482978B9FF009E9575 /* Resources */,
+				EF30CAB129760A9900A843CB /* Model */,
+				EF30CAB029760A9300A843CB /* View */,
+				EF30CAAF29760A7900A843CB /* Controller */,
+				EF30CAAE29760A6C00A843CB /* ViewModel */,
 				EF30CAA7297609BD00A843CB /* Info.plist */,
 				EF30CA9F297609B900A843CB /* BlueChat.xcdatamodeld */,
 			);
 			path = BlueChat;
+			sourceTree = "<group>";
+		};
+		EF30CAAE29760A6C00A843CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF30CAAF29760A7900A843CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFA161592978C3EA009E9575 /* Login */,
+				EF30CA9A297609B900A843CB /* ConversationsViewController.swift */,
+				EFA9CCEF297751DB0052D6C4 /* MensajesViewController.swift */,
+				EFA9CCF129775CA20052D6C4 /* ChatViewController.swift */,
+				EFA161512978C180009E9575 /* PhotoViewController.swift */,
+				EFA161532978C199009E9575 /* VideoPlayerViewController.swift */,
+				EFA161552978C1EB009E9575 /* NewConversationViewController.swift */,
+				EFA161572978C21A009E9575 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF30CAB029760A9300A843CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFA1614A2978BAC3009E9575 /* Storyboard */,
+				EF30CAA2297609BD00A843CB /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF30CAB129760A9900A843CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFA161482978B9FF009E9575 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF30CA98297609B900A843CB /* SceneDelegate.swift */,
+				EF30CA96297609B900A843CB /* AppDelegate.swift */,
+				EFCAF2CD2979FA4A002F6D5A /* Extensions.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EFA1614A2978BAC3009E9575 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EF30CA9C297609B900A843CB /* Main.storyboard */,
+				EF30CAA4297609BD00A843CB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EFA161592978C3EA009E9575 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA1614F2978C14B009E9575 /* RegisterViewController.swift */,
+				EFA1614D2978C11F009E9575 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF30CAAA297609BD00A843CB /* Build configuration list for PBXNativeTarget "BlueChat" */;
 			buildPhases = (
+				6CE4E734716D39878F5C4765 /* [CP] Check Pods Manifest.lock */,
 				EF30CA8F297609B900A843CB /* Sources */,
 				EF30CA90297609B900A843CB /* Frameworks */,
 				EF30CA91297609B900A843CB /* Resources */,
+				B9924B542BF6600186112C65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,7 +218,7 @@
 				};
 			};
 			buildConfigurationList = EF30CA8E297609B900A843CB /* Build configuration list for PBXProject "BlueChat" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -129,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF30CAA6297609BD00A843CB /* LaunchScreen.storyboard in Resources */,
+				EF44478F297B514600211389 /* GoogleService-Info.plist in Resources */,
 				EF30CAA3297609BD00A843CB /* Assets.xcassets in Resources */,
 				EF30CA9E297609B900A843CB /* Main.storyboard in Resources */,
 			);
@@ -136,14 +249,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CE4E734716D39878F5C4765 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlueChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9924B542BF6600186112C65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlueChat/Pods-BlueChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlueChat/Pods-BlueChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlueChat/Pods-BlueChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF30CA8F297609B900A843CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF30CA9B297609B900A843CB /* ViewController.swift in Sources */,
+				EFA1614E2978C11F009E9575 /* LoginViewController.swift in Sources */,
+				EF30CA9B297609B900A843CB /* ConversationsViewController.swift in Sources */,
 				EF30CAA1297609B900A843CB /* BlueChat.xcdatamodeld in Sources */,
+				EFA161502978C14B009E9575 /* RegisterViewController.swift in Sources */,
+				EFA9CCF0297751DB0052D6C4 /* MensajesViewController.swift in Sources */,
+				EFA161562978C1EB009E9575 /* NewConversationViewController.swift in Sources */,
+				EFA161582978C21A009E9575 /* ProfileViewController.swift in Sources */,
+				EFA161522978C180009E9575 /* PhotoViewController.swift in Sources */,
+				EFCAF2CE2979FA4A002F6D5A /* Extensions.swift in Sources */,
 				EF30CA97297609B900A843CB /* AppDelegate.swift in Sources */,
+				EFA161542978C199009E9575 /* VideoPlayerViewController.swift in Sources */,
+				EFA9CCF229775CA20052D6C4 /* ChatViewController.swift in Sources */,
 				EF30CA99297609B900A843CB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +450,7 @@
 		};
 		EF30CAAB297609BD00A843CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B191631FC6DDC4F9FB88180 /* Pods-BlueChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,8 +462,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,14 +471,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digi01.BlueChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		EF30CAAC297609BD00A843CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 917A7EB0ADE66E6230C7AAE8 /* Pods-BlueChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,8 +494,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,9 +503,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digi01.BlueChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
