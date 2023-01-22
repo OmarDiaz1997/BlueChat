@@ -25,6 +25,7 @@
 		EFA9CCF0297751DB0052D6C4 /* MensajesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9CCEF297751DB0052D6C4 /* MensajesViewController.swift */; };
 		EFA9CCF229775CA20052D6C4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9CCF129775CA20052D6C4 /* ChatViewController.swift */; };
 		EFCAF2CE2979FA4A002F6D5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF2CD2979FA4A002F6D5A /* Extensions.swift */; };
+		EFCF6F6E297C9975001942DE /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF6F6D297C9975001942DE /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		EFA9CCEF297751DB0052D6C4 /* MensajesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensajesViewController.swift; sourceTree = "<group>"; };
 		EFA9CCF129775CA20052D6C4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		EFCAF2CD2979FA4A002F6D5A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EFCF6F6D297C9975001942DE /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				EF30CA98297609B900A843CB /* SceneDelegate.swift */,
 				EF30CA96297609B900A843CB /* AppDelegate.swift */,
 				EFCAF2CD2979FA4A002F6D5A /* Extensions.swift */,
+				EFCF6F6D297C9975001942DE /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				EFA161502978C14B009E9575 /* RegisterViewController.swift in Sources */,
 				EFA9CCF0297751DB0052D6C4 /* MensajesViewController.swift in Sources */,
 				EFA161562978C1EB009E9575 /* NewConversationViewController.swift in Sources */,
+				EFCF6F6E297C9975001942DE /* DatabaseManager.swift in Sources */,
 				EFA161582978C21A009E9575 /* ProfileViewController.swift in Sources */,
 				EFA161522978C180009E9575 /* PhotoViewController.swift in Sources */,
 				EFCAF2CE2979FA4A002F6D5A /* Extensions.swift in Sources */,

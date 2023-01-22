@@ -197,20 +197,38 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
         }
         
         // Registro con firebase
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
-            guard let result = authResult, error == nil else{
-                print("Error")
+        DatabaseManager.shared.userExist(with: email, completion: {[weak self]exist in
+            guard let strongSelf = self else {
                 return
             }
-            let user = result.user
-            print("Usuario creado: \(user)")
+            
+            guard !exist else {
+                // Si el usuario existe
+                strongSelf.altertLoginError(message: "Esta cuenta ya se encuentra registrada.")
+                return
+                
+            }
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {authResult, error in
+                /*guard let strongSelf = self else {
+                    return
+                }
+                 */
+                guard authResult != nil, error == nil else{
+                    print("Error")
+                    return
+                }
+
+                DatabaseManager.shared.insertUser(with: ChatAppUser(nombre: nombre,
+                                                                    apellidos: apellidos,
+                                                                    email: email))
+                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            })
         })
-        
     }
     
-    func altertLoginError(){
+    func altertLoginError(message : String = "Debe de llenar todos los campos."){
         let alert = UIAlertController(title: "Datos no validos",
-                                      message: "Debe de llenar todos los campos",
+                                      message: message,
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Aceptar",
                                       style: .cancel,
