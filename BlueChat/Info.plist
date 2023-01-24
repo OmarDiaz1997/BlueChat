@@ -33,5 +33,25 @@
 	<string></string>
 	<key>CFBundleExecutable</key>
 	<string></string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>892552958760709</string>
+      </array>
+      </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>892552958760709</string>
+    <key>FacebookClientToken</key>
+    <string>a68c1ea73c8e377fcf0ff1c0af51e9cb</string>
+    <key>FacebookDisplayName</key>
+    <string>BlueChat</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fbapi</string>
+      <string>fb-messenger-share-api</string>
+    </array>
 </dict>
 </plist>

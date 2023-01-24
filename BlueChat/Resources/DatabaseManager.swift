@@ -22,7 +22,11 @@ extension DatabaseManager{
     
     public func userExist(with email : String,
                           completion: @escaping((Bool) -> Void)){
-        database.child(email).observeSingleEvent(of: .value, with: {snapshot in
+
+        var safeEmail = email.replacingOccurrences(of: ".", with: "-")
+        safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
+        
+        database.child(safeEmail).observeSingleEvent(of: .value, with: {snapshot in
             guard snapshot.value as? String != nil else{
                 completion(false)
                 return
@@ -33,7 +37,7 @@ extension DatabaseManager{
     
     ///Inserta un usuario a la base de datos
     public func insertUser(with user: ChatAppUser){
-        database.child(user.email).setValue([
+        database.child(user.safeEmail).setValue([
             "nombre" : user.nombre,
             "apellidos" : user.apellidos
         ])
@@ -45,5 +49,10 @@ struct ChatAppUser{
     let nombre : String
     let apellidos : String
     let email : String
+    var safeEmail : String{
+        var safeEmail = email.replacingOccurrences(of: ".", with: "-")
+        safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
+        return safeEmail
+    }
     //let profileImageURL : String
 }
