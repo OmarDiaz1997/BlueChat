@@ -7,8 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import JGProgressHUD
 
 class LoginViewController : UIViewController {
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     private let scrollView : UIScrollView = {
         let scrollView = UIScrollView()
@@ -122,15 +125,20 @@ class LoginViewController : UIViewController {
         
         guard let email = emailField.text, let password = passwordField.text,
               !email.isEmpty, !password.isEmpty, password.count >= 6 else{
-            altertLoginError()
+            alertLoginError()
             return
         }
         
+            spinner.show(in: view)
+
         // Inicio de sesion con firebase
         
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion:  {[ weak self]AuthResult, error in
             guard let strongSelf = self else{
                 return
+            }
+            DispatchQueue.main.async {
+                strongSelf.spinner.dismiss()
             }
             
             guard let result = AuthResult, error == nil else{
@@ -143,7 +151,7 @@ class LoginViewController : UIViewController {
         })
     }
     
-    func altertLoginError(){
+    func alertLoginError(){
         let alert = UIAlertController(title: "Datos no validos",
                                       message: "Debe de llenar todos los campos",
                                       preferredStyle: .alert)
