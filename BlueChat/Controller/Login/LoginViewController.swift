@@ -146,6 +146,9 @@ class LoginViewController : UIViewController {
                 return
             }
             let user = result.user
+            
+            UserDefaults.standard.set(email, forKey: "email")
+            
             print("Inicio de sesion correcto: \(email)")
             strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         })
