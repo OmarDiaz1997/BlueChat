@@ -14,10 +14,10 @@ final class StorageManager{
     
     private let storage = Storage.storage().reference()
     
-    public typealias UploadPictureCompletio = (Result<String, Error>) -> Void
+    public typealias UploadPictureCompletion = (Result<String, Error>) -> Void
     
     /// Actualizacion de la imagen en el almacenamiento de firebase y retornos con URL String de descarga
-    public func uploadProfilePicture(with data : Data, fileName : String, completion : @escaping UploadPictureCompletio){
+    public func uploadProfilePicture(with data : Data, fileName : String, completion : @escaping UploadPictureCompletion){
         storage.child("images/\(fileName )").putData(data, metadata: nil, completion: { metadata, error in
             guard error == nil else{
                 //Error
@@ -41,4 +41,16 @@ final class StorageManager{
          case failedToUpload
          case failedToGetDownloadUrl
     }
+    
+    public func downloadURL(for path: String, completion: @escaping (Result<URL, Error>) -> Void ){
+        let reference = storage.child(path)
+        reference.downloadURL(completion: { url, error in
+            guard let url = url, error == nil else{
+                completion(.failure(StorageErrors.failedToGetDownloadUrl))
+                return
+            }
+            completion(.success(url))
+        })
+    }
+    
 }

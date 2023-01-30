@@ -50,10 +50,85 @@ extension DatabaseManager{
                 completion(false)
                 return
             }
-            completion(true)
+            /*Agregar referencias de un nuevo contacto*/
+            self.database.child("users").observeSingleEvent(of: .value, with: {snapshot in
+                if var usersCollection = snapshot.value as? [[String : String]]{
+                    //Vincular usuario al diccionario
+                    let newElement = [
+                        "name": user.nombre+" " + user.apellidos,
+                        "email": user.safeEmail
+                    ]
+                    usersCollection.append(newElement)
+                    self.database.child("users").setValue(usersCollection, withCompletionBlock: {error, _ in
+                        guard error == nil else{
+                            completion(false)
+                            return
+                        }
+                        completion(true)
+                    })
+                }else{
+                    //Crear arreglo para rellenar lista de contactos
+                    let newCollection : [[String : String]] = [
+                        ["name": user.nombre+" " + user.apellidos,
+                         "email": user.safeEmail
+                        ]
+                    ]
+                    self.database.child("users").setValue(newCollection, withCompletionBlock: {error, _ in
+                        guard error == nil else{
+                            completion(false)
+                            return
+                        }
+                        completion(true)
+                    })
+                }
+            })
         })
     }
+    
+    public func getAllUsers(completion: @escaping (Result<[[String: String]], Error>) -> Void) {
+        database.child("users").observeSingleEvent(of: .value, with: { snapshot in
+            guard let value = snapshot.value as? [[String: String]] else{
+                completion(.failure(DatabaseError.failedToFetch))
+                return
+            }
+            completion(.success(value))
+        })
+    }
+    
+    public enum DatabaseError: Error{
+        case failedToFetch
+    }
+    
 }
+
+
+// MARK: - Enviar mensajes / conversaciones
+
+extension DatabaseManager {
+    
+    ///Crear una nueva conversacion con correo electronico y envio del primer mensaje
+    public func createNewConversation(with otherUserEmail: String, firstMessage: Message, completion: @escaping (Bool) -> Void){
+        
+    }
+    
+    /// Recuoera y retorna todas las conversaciones del usuario en base al correo electronico
+    public func getAllConversations(for email: String, completion: @escaping(Result<String, Error>) -> Void){
+        
+    }
+    
+    ///Optener todos los mensajes de una conversacion
+    public func getAllMessagesForConversation(with id: String, completion: @escaping(Result<String, Error>) -> Void){
+        
+    }
+    
+    ///Enviar mensajes con destino de conversacion y mensaje
+    public func sendMessage(to conversation: String, message: Message, completion: @escaping(Result<String, Error>) -> Void){
+        
+    }
+    
+}
+
+
 
 
 struct ChatAppUser{
