@@ -107,8 +107,121 @@ extension DatabaseManager{
 extension DatabaseManager {
     
     ///Crear una nueva conversacion con correo electronico y envio del primer mensaje
-    public func createNewConversation(with otherUserEmail: String, firstMessage: Message, completion: @escaping (Bool) -> Void){
-        
+    public func createNewConversation(with otherUserEmail: String, name : String, firstMessage: Message, completion: @escaping (Bool) -> Void){
+        guard let currentEmail = UserDefaults.standard.value(forKey: "email") as? String,
+                    let currentNamme = UserDefaults.standard.value(forKey: "name") as? String else {
+                        return
+                }
+                let safeEmail = DatabaseManager.safeEmail(emailAddress: currentEmail)
+
+                let ref = database.child("\(safeEmail)")
+
+                ref.observeSingleEvent(of: .value, with: { [weak self] snapshot in
+                    guard var userNode = snapshot.value as? [String: Any] else {
+                        completion(false)
+                        print("user not found")
+                        return
+                    }
+
+                    let messageDate = firstMessage.sentDate
+                    let dateString = ChatViewController.dateFormatter.string(from: messageDate)
+
+                    var message = ""
+
+                    switch firstMessage.kind {
+                    case .text(let messageText):
+                        message = messageText
+                    case .attributedText(_):
+                        break
+                    case .photo(_):
+                        break
+                    case .video(_):
+                        break
+                    case .location(_):
+                        break
+                    case .emoji(_):
+                        break
+                    case .audio(_):
+                        break
+                    case .contact(_):
+                        break
+                    case .custom(_), .linkPreview(_):
+                        break
+                    }
+
+                    let conversationId = "conversation_\(firstMessage.messageId)"
+
+                    let newConversationData : [String : Any] = [
+                        "id": conversationId,
+                        "other_user_email": otherUserEmail,
+                        "name": name,
+                        "latest_message" : [
+                            "date": dateString,
+                            "message": message,
+                            "is_read": false
+                        ]
+                    ]
+
+                    let recipient_newConversationData: [String: Any] = [
+                        "id": conversationId,
+                        "other_user_email": safeEmail,
+                        "name": currentNamme,
+                        "latest_message": [
+                            "date": dateString,
+                            "message": message,
+                            "is_read": false
+                        ]
+                    ]
+                    // Update recipient conversaiton entry
+                    self?.database.child("\(otherUserEmail)/conversations").observeSingleEvent(of: .value, with: { [weak self] snapshot in
+                        if var conversatoins = snapshot.value as? [[String: Any]] {
+                            // append
+                            conversatoins.append(recipient_newConversationData)
+                            self?.database.child("\(otherUserEmail)/conversations").setValue(conversatoins)
+                        }
+                        else {
+                            // create
+                            self?.database.child("\(otherUserEmail)/conversations").setValue([recipient_newConversationData])
+                        }
+                    })
+
+                    // Update current user conversation entry
+                    if var conversations = userNode["conversations"] as? [[String: Any]] {
+                        // conversation array exists for current user
+                        // you should append
+                        conversations.append(newConversationData)
+                        userNode["conversations"] = conversations
+                        ref.setValue(userNode, withCompletionBlock: { [weak self] error, _ in
+                            guard error == nil else {
+                                completion(false)
+                                return
+                            }
+                            self?.finishCreatingConversation(name: name,
+                                                             conversationID: conversationId,
+                                                             firstMessage: firstMessage,
+                                                             completion: completion)
+                        })
+                    }
+                    else {
+                        // conversation array does NOT exist
+                        // create it
+                        userNode["conversations"] = [
+                            newConversationData
+                        ]
+
+                        ref.setValue(userNode, withCompletionBlock: { [weak self] error, _ in
+                            guard error == nil else {
+                                completion(false)
+                                return
+                            }
+
+                            self?.finishCreatingConversation(name: name,
+                                                             conversationID: conversationId,
+                                                             firstMessage: firstMessage,
+                                                             completion: completion)
+                        })
+                    }
+                })
     }
     
     /// Recuoera y retorna todas las conversaciones del usuario en base al correo electronico
